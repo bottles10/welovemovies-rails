@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: welovemovies_rails_production
-  username: welovemovies_rails
-  password: <%= ENV["WELOVEMOVIES_RAILS_DATABASE_PASSWORD"] %>
+  url: <%= Rails.application.credentials.dig(:cockroachlabs_db) %>
+  sslmode: require
+  sslrootcert: <%= Rails.root.join("root.crt") %>
