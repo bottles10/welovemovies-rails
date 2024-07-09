@@ -32,4 +32,15 @@ class MovieTest < ActiveSupport::TestCase
     
     assert @movie1.image.attached?
   end
+
+  test "should create a valid movie" do
+    movie = @movie1
+    movie.image.attach(io: File.open(Rails.root.join('test', 'fixtures', 'files', 'icon.png')), filename: 'icon.png', content_type: 'image/png')
+
+    movie.save
+    assert movie.image.attached?
+
+    assert movie.valid?
+  end
+
 end
