@@ -20,9 +20,11 @@
 
   <body>
     <%= render "layouts/navigation" %>
-    
-    <main class="container mx-auto px-10 lg:px-48">
-      <%= yield %>
+
+    <main class="px-5 xl:px-48">
+      <div class="py-10">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>
