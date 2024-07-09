@@ -1,0 +1,16 @@
+<section class="space-y-8">
+    <article class="md:flex md:space-x-8">
+        <div class="md:w-96 lg:w-auto">
+            <%= image_tag(movie.image, alt: movie.title, class: "w-full rounded-t") %>
+        </div>
+        <div class="md:w-96 lg:w-auto space-y-3">
+            <h4 class="text-3xl font-bold"><%= movie.title.titleize%></h4>
+            <p><%= movie.description %></p>
+            <p class="font-bold">Runtime: <span class="font-light"><%= movie.runtime_in_minutes %> minutes</span></p>
+            <p class="font-bold">Rating: <span class="font-light"><%= movie.rating.upcase %></span></p>
+            <p class="font-bold">Average Review Rating: <span class="font-light">3</span></p>
+            <%= link_to "Show More", movie, class: "inline-block py-2 px-6 bg-blue-500 text-white rounded" %>
+        </div>
+    </article>
+</section>
+     

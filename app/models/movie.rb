@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  enum :rating, { pg: 0, lv: 1 }
+  enum :rating, { pg: 0, "pg-13": 1, lv: 2 }
   has_rich_text :description
   validates :title, presence: true
   validates :runtime_in_minutes, presence: true

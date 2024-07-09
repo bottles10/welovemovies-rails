@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-    before_acrion :set_movie, only: %i[show]
+    before_action :set_movie, only: %i[show]
 
     def index
         @movies = Movie.all
